@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Chip, Grid } from "@mui/material"
 
