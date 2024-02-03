@@ -3,7 +3,7 @@ import './App.css';
 import { Chip, Grid } from "@mui/material"
 
 function App() {
-  const skills = ["Compassionate",
+  const skills1 = ["Compassionate",
     "Empathetic",
     "Intuitive",
     "Comforting",
