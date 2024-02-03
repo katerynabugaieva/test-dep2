@@ -58,10 +58,14 @@ function App() {
 
   const resume1 = "Dedicated Emotional Support Animal offering unwavering companionship and comfort to individuals experiencing emotional or psychological distress."
   const resume2 = "Skilled in fostering a calming and reassuring presence, contributing to improved mental well-being and emotional stability."
+
+  console.log(resume2)
+  console.log(employment2)
+  console.log(skills2)
   return (<>
     <Grid container spacing={2}>
       <Grid item xs={4}>
-        <img src="./avatar.png" width="100px" />
+        <img src="./avatar.png" width="100px" alt="it is otto"/>
       </Grid>
       <Grid item xs={8}>
         <h1>Otto</h1>
