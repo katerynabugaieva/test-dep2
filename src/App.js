@@ -2,7 +2,7 @@ import './App.css';
 import { Chip, Grid } from "@mui/material"
 
 function App() {
-  const skills1 = ["Compassionate",
+  const skills1 = ["Passionate",
     "Empathetic",
     "Intuitive",
     "Comforting",
@@ -62,40 +62,52 @@ function App() {
   console.log(employment2)
   console.log(skills2)
   return (<>
+  <div style={{padding:'4em 1em'}}>
     <Grid container spacing={2}>
       <Grid item xs={4}>
-        <img src="./avatar.png" width="100px" alt="it is otto"/>
+        <img src="./avatar.png" width="100%" alt="it is otto"/>
       </Grid>
       <Grid item xs={8}>
         <h1>Otto</h1>
         <h3>emotional.support</h3>
-        <h4>{resume1}</h4>
+        <h6>{resume1}</h6>
       </Grid>
     </Grid>
 
     <Grid container spacing={2}>
       <Grid item xs={4}>
-        <h5>Skills</h5>
+        <h4>Skills</h4>
         {skills1.map((skill, key) => <Chip label={skill} key={key} />)}
+
+        <h4>Education</h4>
+        <h6>The school of Good boys and Girls, 2019</h6>
+
+        <h4>Contacts</h4>
+        <h6>No need to call, I am always here for you</h6>
       </Grid>
       <Grid item xs={8}>
-        <h5>Employment history</h5>
+        <h4>Employment history</h4>
         {employment.map((job, key) => {
           return (
-            <Grid container spacing={2} key={key}>
+            <Grid container spacing={1} key={key} >
               <Grid item xs={6}>
-                {job.name}!!!
+                <h5>{job.name}</h5>
+                <h6>{job.position}</h6>
               </Grid>
-              <Grid item xs={6}>
-                {job.position}
+              <Grid item xs={6} display={'grid'}>
+                <h6 style={{marginLeft:'auto'}}>{job.date}</h6>
+              </Grid>
+              <Grid item xs={12} >
+                {job.description}
               </Grid>
             </Grid>
+            
           )
-
-          //<Job job={job} key={key} /> 
         })}
       </Grid>
+    
     </Grid>
+    </div>
   </>
   );
 }
